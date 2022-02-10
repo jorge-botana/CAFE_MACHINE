@@ -46,24 +46,24 @@ Se cuenta con una máquina de estados, y esta a su vez una máquina de subestado
 
 El circuito obedece a una máquina secuencial que obedece a una máquina de estados (se puede ver en el interior de la carpeta ``state_machine``) que cuenta con estados principales (los de la primera columna) y subestados (A0, A1, A2, A3, A4), dando lugar a los diferentes mensajes que puede mostrar la máquina de café con los ocho displays de siete segmentos (los de la segunda, tercera, cuarta y quinta columna).
 
-| ESTADOS Y SUBESTADOS | A0        | A1              | A2            | A3           | COINS    | TIEMPO ENTRE SUBESTADOS |
-| -------------------- | --------- | --------------- | ------------- | ------------ | -------- | ----------------------- |
-| START_RESET          | CAFE 2E   | RESET! 3        | RESET! 2      | RESET! 1     | Azul     | 1 segundo               |
-| CRE_000C             | CRE 0.00E | --------------- | ------------- |------------- | Amarillo | Siempre en A0           |
-| CRE_050C             | CRE 0.50E | --------------- | ------------- |------------- | Amarillo | Siempre en A0           |
-| CRE_100C             | CRE 1.00E | --------------- | ------------- |------------- | Amarillo | Siempre en A0           |
-| CRE_150C             | CRE 1.50E | --------------- | ------------- |------------- | Amarillo | Siempre en A0           |
-| CRE_200C             | CRE 2.00E |                 | CRE 2.00E     |              | Rojo     | 500 milisegundos        |
-| CRE_250C             | CRE 2.50E |                 | CRE 2.50E     |              | Rojo     | 500 milisegundos        |
-| CRE_300C             | CRE 3.00E |                 | CRE 3.00E     |              | Rojo     | 500 milisegundos        |
-| CRE_350C             | CRE 3.50E |                 | CRE 3.50E     |              | Rojo     | 500 milisegundos        |
-| DEV_050C_A           | DEV 0.50E | DEV 0.50E       | 0UD 1.00E     | 1UD 0.50E    | Rojo     | 1 segundo               |
-| DEV_100C_A           | DEV 1.00E | DEV 1.00E       | 1UD 1.00E     | 0UD 0.50E    | Rojo     | 1 segundo               |
-| DEV_150C_A           | DEV 1.50E | DEV 1.50E       | 1UD 1.00E     | 1UD 0.50E    | Rojo     | 1 segundo               |
-| DEV_050C_B           | DEV 0.50E | DEV 0.50E       | 0UD 1.00E     | 1UD 0.50E    | Rojo     | 1 segundo               |
-| DEV_100C_B           | DEV 1.00E | DEV 1.00E       | 1UD 1.00E     | 0UD 0.50E    | Rojo     | 1 segundo               |
-| DEV_150C_B           | DEV 1.50E | DEV 1.50E       | 1UD 1.00E     | 1UD 0.50E    | Rojo     | 1 segundo               |
-| WAIT_READY           | ESPERE 3  | ESPERE 2        | ESPERE 1      | ¡LISTO!      | Rojo     | 1 segundo               |
+|             | A0        | A1          | A2          | A3          | COINS       | TIEMPO           |
+| ----------- | --------- | ----------- | ----------- | ----------- | ----------- | ---------------- |
+| START_RESET | CAFE 2E   | RESET! 3    | RESET! 2    | RESET! 1    | Azul        | 1 segundo        |
+| CRE_000C    | CRE 0.00E | ----------- | ----------- | ----------- | Amarillo    | Siempre en A0    |
+| CRE_050C    | CRE 0.50E | ----------- | ----------- | ----------- | Amarillo    | Siempre en A0    |
+| CRE_100C    | CRE 1.00E | ----------- | ----------- | ----------- | Amarillo    | Siempre en A0    |
+| CRE_150C    | CRE 1.50E | ----------- | ----------- | ----------- | Amarillo    | Siempre en A0    |
+| CRE_200C    | CRE 2.00E |             | CRE 2.00E   |             | Rojo        | 500 milisegundos |
+| CRE_250C    | CRE 2.50E |             | CRE 2.50E   |             | Rojo        | 500 milisegundos |
+| CRE_300C    | CRE 3.00E |             | CRE 3.00E   |             | Rojo        | 500 milisegundos |
+| CRE_350C    | CRE 3.50E |             | CRE 3.50E   |             | Rojo        | 500 milisegundos |
+| DEV_050C_A  | DEV 0.50E | DEV 0.50E   | 0UD 1.00E   | 1UD 0.50E   | Rojo        | 1 segundo        |
+| DEV_100C_A  | DEV 1.00E | DEV 1.00E   | 1UD 1.00E   | 0UD 0.50E   | Rojo        | 1 segundo        |
+| DEV_150C_A  | DEV 1.50E | DEV 1.50E   | 1UD 1.00E   | 1UD 0.50E   | Rojo        | 1 segundo        |
+| DEV_050C_B  | DEV 0.50E | DEV 0.50E   | 0UD 1.00E   | 1UD 0.50E   | Rojo        | 1 segundo        |
+| DEV_100C_B  | DEV 1.00E | DEV 1.00E   | 1UD 1.00E   | 0UD 0.50E   | Rojo        | 1 segundo        |
+| DEV_150C_B  | DEV 1.50E | DEV 1.50E   | 1UD 1.00E   | 1UD 0.50E   | Rojo        | 1 segundo        |
+| WAIT_READY  | ESPERE 3  | ESPERE 2    | ESPERE 1    | ¡LISTO!     | Rojo        | 1 segundo        |
 
 ## Síntesis
 
